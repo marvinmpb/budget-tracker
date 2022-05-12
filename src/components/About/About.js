@@ -51,25 +51,9 @@ function About({ mode, handleClickLogout, isLogged }) {
           </div>
         </div>
       </div>
-
-
-
-
-
-
-      {isLogged ?
-        <>
-          < Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' }, }}>
-            <BottomNavMobile mode={mode} handleClickLogout={handleClickLogout} />
-          </Box>
-        </>
-        :
+      {!isLogged && (
         <NavLink to='/'><Button variant='contained'>Retourner à l'accueil</Button></NavLink>
-      }
-
-
-
-
+      )}
     </div >
   )
 }
