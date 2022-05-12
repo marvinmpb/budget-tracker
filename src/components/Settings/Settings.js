@@ -206,7 +206,7 @@ function Settings({ mode, setIsLogged, user, handleClickLogout, setUser }) {
         <div className='forms'>
           <div className='avatar-form'>
             <form >
-              <h1 className={mode ? 'dark' : ''}>Avatar (uniquement .pdf)</h1>
+              <h1 className={mode ? 'dark' : ''}>Avatar (uniquement .png)</h1>
               <input
                 className={mode ? 'dark' : 'input-avatar'}
                 type="file"
