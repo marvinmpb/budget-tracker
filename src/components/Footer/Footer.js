@@ -11,6 +11,7 @@ import { useLocation } from 'react-router-dom'
 import BottomNavMobile from '../BottomNavMobile/BottomNavMobile';
 
 // MUI 
+import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
@@ -78,6 +79,14 @@ function Footer({ mode, isLogged, setIsLogged, handleClickLogout }) {
           {'Mentions légales'}
         </NavLink> */}
       </Stack>
+
+      {/* Bottom navbar for mobile view */}
+      {isLogged && (
+
+        <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' }, }}>
+          <BottomNavMobile mode={mode} handleClickLogout={handleClickLogout} />
+        </Box>
+      )}
     </div >
   )
 }

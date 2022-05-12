@@ -511,8 +511,6 @@ function Expenses({ mode, setIsLogged, handleClickLogout, user }) {
           <Button variant='outlined' onClick={resetSelectValues}>Afficher l'ensemble des dépenses</Button>
         )}
         <ExpensesListMobile month={month} mode={mode} expensesByMonth={expensesByMonth} expensesByMonthByDate={expensesByMonthByDate} allCategories={allCategories} currencySymbol={currencySymbol} deleteExpense={deleteExpense} expenses={expenses} expensesByDate={expensesByDate} expensesAmount={expensesAmount} expensesAmountByMonth={expensesAmountByMonth} expensesByCategory={expensesByCategory} category={category} expensesByCategoryAndMonth={expensesByCategoryAndMonth} expensesAmountByCategory={expensesAmountByCategory} expensesAmountByCategoryAndMonth={expensesAmountByCategoryAndMonth} />
-        {/* Bottom navbar for mobile view */}
-        <BottomNavMobile mode={mode} handleClickLogout={handleClickLogout} setIsLogged={setIsLogged} />
       </Stack>
     </div >
   )
