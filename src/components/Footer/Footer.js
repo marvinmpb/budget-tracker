@@ -59,11 +59,11 @@ function Footer({ mode, isLogged, setIsLogged, handleClickLogout }) {
         >
           {'A propos'}
         </NavLink>
-        <NavLink to='/contact' underline='hover'
+        {/* <NavLink to='/contact' underline='hover'
           className={mode ? 'footer-link--dark' : 'footer-link--light'}
         >
           {'Contact'}
-        </NavLink>
+        </NavLink> */}
         {/* <NavLink to='/legalnotice' underline='hover'
           className={mode ? 'footer-link--dark' : 'footer-link--light'}
         >

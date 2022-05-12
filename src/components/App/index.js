@@ -145,7 +145,7 @@ function App() {
             </>
           )}
           <Route path='/about' element={<About mode={darkMode} handleClickLogout={handleClickLogout} isLogged={isLogged} />} />
-          <Route path='/contact' element={<Contact />} />
+          {/* <Route path='/contact' element={<Contact />} /> */}
           {/* <Route path='/legalnotice' element={<LegalNotice />} /> */}
           <Route path='*' element={<NotFound />} />
         </Routes>

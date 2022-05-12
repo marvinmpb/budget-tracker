@@ -50,13 +50,13 @@ function MobileMenu() {
             A propos
           </NavLink>
         </MenuItem>
-        <MenuItem onClick={handleClose}>
+        {/* <MenuItem onClick={handleClose}>
           <NavLink
             to="/contact"
           >
             Contact
           </NavLink>
-        </MenuItem>
+        </MenuItem> */}
         {/* <MenuItem onClick={handleClose}>
           <NavLink
             to="/legalnotice"
