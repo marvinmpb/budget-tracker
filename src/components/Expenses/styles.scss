@@ -141,10 +141,12 @@
   height: 100% !important;
   overflow: auto !important;
   &-top {
-    height: 50%;
+    height: 60%;
+    overflow: auto;
   }
   &-bottom {
-    height: 50%;
+    height: 40%;
+    overflow: auto;
   }
   .MuiFormControl-root {
     width: 30%;
