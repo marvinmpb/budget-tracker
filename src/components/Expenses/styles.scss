@@ -140,6 +140,13 @@
 .expenses-mobile {
   height: 100% !important;
   overflow: auto !important;
+  &-list {
+    height: 100%;
+    .MuiList-root {
+      height: 100%;
+      overflow: auto;
+    }
+  }
   &-top {
     height: 60%;
     overflow: auto;
@@ -176,6 +183,7 @@
     }
   }
 }
+
 
 .MuiMenu-list {
   max-height: 15rem !important;
