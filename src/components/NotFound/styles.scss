@@ -1,0 +1,22 @@
+// .MatrixParallax-fullWindow-keni91 {
+//     touch-action: none;  
+// }
+
+.notfound {
+    height: 80%;
+    &-img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    &-text {
+        z-index: 5;
+        font-weight: bold;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        text-align: center;
+        overflow: auto;
+    }
+}

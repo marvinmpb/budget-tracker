@@ -1,0 +1,158 @@
+.about {
+  $blue: #508DD4;
+  $blackberry: #000F34;
+  $text-color: rgba($blackberry, .58);
+  height: 80%;
+
+body {
+  font-size: 21px;
+  font-family: 'Zilla Slab', 'Roboto Slab', sans-serif;
+  line-height: 1.8;
+  color: $text-color;
+  letter-spacing: .03em;
+}
+
+&a {
+  // color: $blue;
+  text-decoration: none;
+  border-radius: .75rem;
+  transition: 250ms ease all;
+
+  
+}
+
+hr {
+  height: .5rem;
+  width: 100%;
+  display: block;
+  
+  background: $blue;
+  border: 0;
+  margin: 4rem 0;
+}
+
+h1, h2, h3
+.h1, .h2, .h3 {
+  line-height: 1;
+  font-family: 'Thillends', 'Montserrat', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+h1 { font-size: 6rem; }
+
+.intro-text {
+  padding: 1rem;
+  text-align: center;
+  height: 30%;
+  overflow: auto;
+  margin: 1rem;
+  h1 {
+    margin: 0;
+    color: $blue;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    height: 100%;
+    font-family: 'Krona One', serif;
+  }
+}
+
+.dev-infos {
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+}
+
+.card-staff {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  transform: translateX(2vw) rotate(-1deg);
+  &-wrapper {
+    height: 50%;
+    overflow: auto;
+    
+  }
+
+  &__info {
+    justify-content: center;
+    margin-left: 4rem;
+    &__name {
+      margin: 0;
+      transform: translate(-8rem, 1rem);
+      text-shadow: -2rem 2rem .25rem rgba($blackberry, .05);
+      white-space: nowrap;
+      color: $blue;
+      font-size: 3rem;
+    }
+
+    &__description {
+      margin: 0;
+    }
+
+    &__contact {
+      margin-top: 1rem;
+      margin-left: -.75rem;
+      
+      a {
+        color: $blue;
+        text-decoration: none;
+        display: inline-block;
+        padding: 0 .75rem;
+        border-radius: .75rem;
+        transition: 300ms ease all;
+
+        &:hover {
+          background: $blue;
+          color: #FFF;
+          transform: scale(1.1) rotate(2deg);
+        }
+      }
+    }
+  }
+
+  &:nth-child(2n) {
+    transform: translateX(-2vw) rotate(1deg);
+
+    .card-staff__image-wrapper {
+      order: 1;
+    }
+
+    .card-staff__info {
+      text-align: right;
+      margin-left: 0;
+      margin-right: 4rem;
+
+      &__decoration {
+        right: initial;
+        left: 10%;
+        background: $blue;
+      }
+
+      &__name {
+        transform: translate(8rem, 1rem);
+        text-shadow: 2rem 2rem .25rem rgba($blackberry, .05);
+      }
+    }
+  }
+  
+  &:nth-child(3n) {
+    margin-left: 16rem;
+
+    .card-staff__info {
+
+      &__decoration {
+        background: $blue;
+      }
+
+      &__name {
+        color: $blue;
+      }
+    }
+  }
+}
+}

@@ -1,0 +1,72 @@
+.app {
+  width: 100%;
+  margin: auto;
+  height: 100vh;
+  text-align: center;
+  overflow: auto;
+}
+// MuiBox-root is CSS for modals
+.MuiBox-root {
+  border: none !important;
+  border-radius: 10px;
+}
+
+.themeMode-dark-fullscreen {
+  // background-color: #131313 !important;
+  background-color: #202225 !important;
+  transition: all 0.5s ease;
+}
+
+.themeMode-light-fullscreen {
+  background: #d2d3db;
+  transition: all 0.5s ease;
+}
+
+/* Code below prevents the change of style when autocomplete on the inpuy */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none !important;
+  -webkit-text-fill-color: none !important;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.MuiInputBase-input {
+    font-size: initial !important;
+}
+.themeMode-dark-fullscreen {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    border: none !important;
+    -webkit-text-fill-color: white !important;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+    transition: background-color 5000s ease-in-out 0s;
+  }      
+}
+
+/* .app img {
+  max-width: 60px;
+} */
+
+
+/******* RESPONSIVE MEDIA QUERIES *******/
+
+/* Desktop View */
+@media screen and (min-width:900px) {  
+  .wrapper {
+    min-height: 600px;
+  }
+}

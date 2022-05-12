@@ -1,0 +1,78 @@
+// CSS for left navbar
+.leftnavbar {
+  padding-top: 2rem;
+  & .dark {
+    .pro-icon-wrapper {
+      background-color: #202225 !important;
+    }
+    a {
+      color: white !important;
+    }
+  }
+  & .pro-item-content {
+    color: #1876D0;
+  }
+  & .pro-sidebar {
+      width: 190px !important;
+      min-width: 190px !important;
+      &.collapsed {
+        width: 80px !important;
+        min-width: 80px !important;
+      }
+    }
+  & .pro-menu a {
+    color: #1876D0 !important;
+  }
+  & .pro-icon {
+    background-color: #1876D1 !important;
+    & svg {
+      color: white;
+    }
+  }
+  & .pro-icon-wrapper {
+    background-color: #d2d3db !important;
+  }
+  & .pro-sidebar-content {
+    transition: all 0.5s ease;
+    background-color: #d2d3db;
+    flex-grow: 1;
+    &.dark {
+      background-color: #202225 !important;
+    }
+  }
+  & .pro-sidebar-footer {
+    border-top: none !important;
+    background-color: #d2d3db;
+    transition: all 0.5s ease;
+    margin-top: 4rem;
+    &.dark {
+      background-color: #202225 !important;
+      border-top: none !important;
+    }
+  }
+  & .pro-sidebar-header {
+    border-bottom: none !important;
+    background-color: #d2d3db;
+    transition: all 0.5s ease;
+    .closemenu {
+      margin-left: 0.5rem;
+      color: #1876D0;
+      font-size: x-large;
+    }
+    &.dark {
+        background-color: #202225 !important;
+        border-bottom: none !important;
+    } 
+  }
+  & .pro-sidebar-layout {
+    // background-color: #d2d3db !important;
+    height: initial !important;
+  }
+  & .pro-sidebar-inner {
+    background: none !important;
+  }
+}
+
+
+
+

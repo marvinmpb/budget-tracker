@@ -1,0 +1,91 @@
+.settings {
+  height: 80%;
+  width: 100%;
+  margin: auto;
+  #outlined-avatar {
+    padding-left: 64%;
+  }
+  & MuiBox-root {
+    width: 100%;
+  }
+  &-form {
+    width: 100%;
+  }
+  &-delete-btns {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .MuiButton-root {
+    overflow: auto;
+  }
+  // .avatar-form {
+  //   form {
+  //   width: 90%;
+  //   overflow: auto;
+  //   }
+  // }
+}
+
+
+// CSS for settings in desktop mode
+.settings-desktop {
+  display: flex;
+  .sign-up-box-form__inputs-box {
+    width: 100% !important;
+  }
+  & .password--btn--dark {
+    color: white !important;
+  }
+  & .update-settings-btn {
+    justify-content: center;
+    & Button {
+      margin: 1rem;
+    }
+  }
+  & .form--select--svg--dark {
+    & svg {
+      color: white !important;
+    }
+  }
+  & .form--input--border--dark {
+    border: 0 !important;
+    caret-color: #1876D1 !important;
+
+    fieldset {
+      border-color: white !important;
+    }
+    .Mui-focused {
+      fieldset {
+        border-color: #1876D1 !important;
+        
+      }
+    }
+    .MuiOutlinedInput-root{
+      color: white !important;
+    }
+  }
+}
+
+.accountImage {
+  width: 80px;
+  height: 80px;
+}
+
+.forms {
+  width: 100%;
+}
+
+.avatar-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & .MuiAvatar-root {
+    margin-left: 1rem;
+  }
+}
+
+
+
+
+
+

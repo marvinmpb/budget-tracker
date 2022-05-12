@@ -1,0 +1,93 @@
+// CSS for signin
+.signin {
+    .light {
+        color: black !important;
+        transition: all 0.5s ease;
+    }
+    .dark {
+        color: white !important;
+        transition: all 0.5s ease;
+        border-color: white;
+    }
+    .MuiFormControl-root {
+        background-color: none !important;
+    }
+    
+    .form--input--border--dark {
+        border: 0 !important;
+            
+        fieldset {
+            border-color: white !important;
+        }
+    
+        .Mui-focused {
+            fieldset {
+                border-color: #1876D1 !important;
+            }
+        }
+        .MuiOutlinedInput-root{
+            color: white !important;
+        }
+        
+    }
+    
+    .password--btn--dark {
+        color: white !important;
+    }
+    
+    .sign-in {
+        margin: auto;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        position: relative;
+    
+        &-box {
+            justify-content: center;
+            max-width: 345px;
+            margin: auto;
+            border: 1px solid #999;
+            border-radius: 4px;
+            position: relative;
+            z-index: 2;
+    
+            &-form {
+                &__inputs-box {
+                    justify-content: space-between;
+                    min-height: 250px;
+                    padding: 2rem;
+                }
+            }
+            & .form--text {
+                &.dark {
+                    svg {
+                        color: white !important;
+                    }
+                }
+            } 
+        }
+    
+        &-img-box {
+            position: absolute;
+            bottom: -11rem;
+            height: 14rem;
+            background: var(--background) no-repeat center center;
+            background-size: 90%;
+        }    
+    }
+    
+    
+    // RESPONSIVE MEDIA QUERIES
+    
+    /* Desktop View */
+    @media screen and (min-width:900px) {
+        .sign-in {
+            max-width: 800px;
+            &-img-box {
+                position:initial;
+                height: auto;
+            }
+        }
+    }
+}
+

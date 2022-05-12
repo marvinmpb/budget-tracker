@@ -1,0 +1,98 @@
+// CSS for categories page
+.categories {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  height: 80%;
+  position: relative;
+  &-add-btn {
+    margin-bottom: 2rem !important;
+    width: auto;
+  }
+  h2 {
+    min-height: 2rem;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  &-row-left {
+    width: 50%;
+  }
+  &-row-right {
+    position: absolute;
+    right: 10px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .MuiButton-root {
+    width: fit-content;
+    position: absolute;
+    top: 0px;
+  }
+  .MuiTypography-root {
+    overflow-wrap: break-word;
+  }
+  &-left-content {
+    width: 50%;
+    height: 90%;
+    margin-top: 3rem;
+    // overflow: scroll;
+    .dark {
+      .MuiListItemText-root {
+        color: white;
+      }
+    }
+  }
+  &-right-content {
+    width: 50%;
+    height: 90%;
+    margin-top: 3rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .dark {
+      .MuiListItemText-root {
+        color: white;
+      }
+    }
+  }
+  &-center-content {
+    margin: 0 auto;
+    height: fit-content;
+  }
+  .MuiList-root {
+    background-color: transparent !important;
+    height: 90%;
+    max-width: 100% !important;
+    overflow: overlay;
+  }
+  .MuiListItem-root {
+    max-width: 90%;
+  }
+  .MuiDivider-root {
+   width: 80%;
+   margin: auto;
+  }
+}
+
+// CSS for modal add category
+
+.addcategories-modal {
+  
+  &-inputs {
+    display: flex;
+    flex-direction: column;
+  }
+  &-btns {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .form--input--border--dark {
+      .MuiInputLabel-root {
+        color: black !important;
+      }
+  }
+} 

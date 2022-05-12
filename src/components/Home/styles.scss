@@ -1,0 +1,164 @@
+// CSS for home
+$primary: #1876D1;
+
+.home {
+  height: 70%;
+  .MuiTypography-root {
+    color: #131313 !important;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1rem;
+}
+  &-mobile {
+    height: 100%;
+    #content {
+      width: 100%;
+      margin: 0 auto;
+  }
+  // media queries to manage the display of the image in mobile view
+  @media screen and (max-width: 400px) {
+    &-img {
+      height: 60% !important;
+    }
+    .carousel {
+      height: 40% !important;
+    }
+  }
+    &-img {
+      height: 75%;
+      width: 100%;
+    }
+  .carousel {
+    height: 25%;
+  }
+  }
+}
+.MuiButton-root {
+  border-radius: 25px !important;
+}
+.MuiContainer-root {
+  height: 100%;
+}
+.home-box {
+  height: 100% !important;
+  &--container {
+    margin-left: 0 !important;
+    align-items: flex-start !important;
+    justify-content: space-between;
+    max-width: none !important;
+  }
+  // Below: CSS that manages the hover effect on the buttons 
+  a {
+    position: relative;
+    margin: auto;
+    padding: 19px 22px;
+    transition: all .2s ease;
+    &-active {
+      transform: scale(.96)
+    }
+  }
+  a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgba($primary,.7);
+    width: 56px;
+    height: 56px;
+    transition: all .3s ease;
+  }
+  &-btn-text {
+    position: relative;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  &-btn-text:hover {
+    &:before {
+      width: 100%;
+      background: rgba($primary,.4);
+    }
+  }
+  
+ 
+  .gold-key-container {
+    width: 30% !important;
+  }
+  .MuiPaper-root {
+    width: 45% !important;
+    max-height: 45% !important;
+    border-radius: 25px;
+    margin: 0.6rem !important;
+    background: linear-gradient(#e0eafc,#cfdef3);
+  }
+  &--title {
+    font-weight: bold;
+    height: 10% !important;
+    margin-bottom: 1rem;
+  }
+  &--img {
+    width: 80%;
+    height: 80%;
+    animation: float 6s ease-in-out infinite;
+  }
+  &--mobile {
+    justify-content: center;
+    height: 90% !important;
+  }
+  @keyframes float {
+    0% {
+      transform: translatey(40px);
+    }
+    50% {
+      transform: translatey(-40px);
+    }
+    100% {
+      transform: translatey(40px);
+    }
+  }
+}
+
+
+// CSS for home left content 
+.home-functionality-info {
+  // background-color: blue;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  
+  &--content {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;  
+    text-align: justify; 
+    }
+  }
+ .light {
+    color: black !important;
+    transition: all 0.5s ease;
+  }
+.dark {
+    color: white !important;
+    transition: all 0.5s ease;
+}
+
+// handle border color for left text in dark mode
+.themeMode-dark-fullscreen {
+  .home-functionality-info::-webkit-scrollbar-thumb {
+    background-color: white; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 3px solid white; /* creates padding around scroll thumb */
+  }
+  .home-functionality-info::-webkit-scrollbar {
+    width: 1px; /* width of the entire scrollbar */
+  }
+}

@@ -1,0 +1,38 @@
+// .header {
+//   &-btn {
+//       background-color: whitesmoke !important;
+//   }
+// }
+
+
+// CSS for footer
+.footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      overflow: auto;
+      &-buttons--mobile {
+        margin-bottom: 2rem;
+     }
+     &-buttons--desktop {
+      margin-bottom: 2rem;
+     }
+     &-link--dark {
+      color: white !important;
+      transition: all 0.5s ease;
+    }
+    &-link--light {
+      color: black !important;
+      transition: all 0.5s ease;
+    }
+
+     &-buttons--light {
+      color: black !important;
+      transition: all 0.5s ease;
+
+    }
+    &-buttons--dark {
+      color: black !important;
+      transition: all 0.5s ease;
+    }   
+}

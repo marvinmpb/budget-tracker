@@ -1,0 +1,177 @@
+// CSS for expenses
+.expenses {
+  height: 80%;
+  width: 100%;
+  margin: auto;
+  // Desktop CSS 
+  .pro-item-content {
+    line-height: 2rem;
+  }
+  .MuiList-root {
+    background: none;
+    min-height: 90%;
+    overflow-x: auto;
+    max-width: none !important;
+    & p {
+      margin-bottom: 1rem;
+    }
+  }
+  .MuiSvgIcon-root:hover {
+    cursor: pointer;
+  }
+  .MuiButton-root {
+    margin-top: 0.7rem;
+  } 
+  .star-information {
+    font-size: x-small;
+    margin-top: 0.5rem;
+    & .MuiRating-root {
+      font-size: 0.75rem !important;
+      vertical-align: sub;
+    }
+  }
+  &-desktop {
+    margin: auto;
+    height: 90%;
+  }
+  &-desktop-left {
+    width: 50%;
+    overflow: auto;
+    // Il faut gérer le fait de cacher les bordures pour l'overflow
+    &-btns {
+      display: flex;
+      justify-content: center;
+      justify-content: space-around;
+    }
+  }
+  &-desktop-right {
+    width: 50%;
+    &-donut {
+      width: max-content !important;
+      height: max-content !important;
+      &.dark {
+        fill: white !important;
+      }
+    }
+  }
+  &-row-right {
+    width: 80%;
+    display: flex;
+    text-align: right;
+    align-items: baseline;
+  }
+  &-row-left {
+    width: 60%;
+  } 
+  .MuiTypography-root {
+    overflow-wrap: break-word;
+  }
+  .MuiDivider-root-dark {
+    border-color: white ;
+  }
+  .MuiInputLabel-root-dark {
+    color: white !important; 
+  }
+  &-select--dark {
+    svg {
+      color: white !important;
+    }
+    .MuiSelect-select {
+      color: white;
+    }
+  }
+  &-dark {
+    .MuiListItemText-root {
+      color: white;  
+    } 
+    p {
+      color: white !important;
+    }
+  }
+  .apexcharts-legend {
+    display: flex;
+    text-align: start !important;
+    width: 30% !important;
+    // the bottom line manages the word cut if the input entered by the user is too big 
+    &-series {
+      overflow-wrap: anywhere !important;
+    }
+  }
+  .addExpenses-btn {
+    margin-right: 0.1rem;
+  }
+  .MuiInput-root::before {
+    border-bottom: 1px solid white !important
+  }
+  & .dark {
+    .apexcharts-legend-text {
+      color: white !important;
+    }
+  }
+}
+
+
+// CSS for AddExpenses modal 
+.addexpenses-modal {
+  .MuiTypography-root {
+    width: 90%;
+    margin: auto;
+  }
+  .form--input--border--dark {
+    .MuiInputLabel-root {
+      color: black !important;
+    }
+  }  
+}
+
+
+// CSS for AddExpenses modal Desktop
+.addexpenses-modal {
+  &-inputs {
+    display: flex;
+    flex-direction: column;
+  }
+  &-btns {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+
+// CSS for expenses mobile 
+.expenses-mobile {
+  height: 100% !important;
+  overflow: auto !important;
+  .MuiFormControl-root {
+    width: 30%;
+  }
+  .MuiList-root {
+    min-height: auto !important;
+  }
+  &-donut {
+    height: 50% !important;
+    width: 100% !important;
+    margin-top: 0.5rem !important;
+    .donutchart {
+      height: 90% !important;
+      width: 100% !important;
+      font-size: 2rem;
+    }
+    &.dark {
+      fill: white !important;
+    }
+  }
+  &-add-btn {
+    width: 90% !important;
+    padding-left: 70%;
+    &-svg {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+}
+
+.MuiMenu-list {
+  max-height: 15rem !important;
+}
+

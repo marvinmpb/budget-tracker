@@ -1,0 +1,103 @@
+// CSS for signup
+.signup {
+    .sign-up-box {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .sign-up-img-box {
+        // position: absolute;
+        height: 14rem;
+        width: 90%;
+        margin: auto;
+        background: var(--background) no-repeat center center;
+        background-size: 100%;    
+        height: 18rem;    
+    }
+    .sign-up-box-form__inputs-box {
+        .light {
+            color: black !important;
+            transition: all 0.3s ease;
+        }
+        .dark {
+            color: white !important;
+            transition: all 0.5s ease;
+            border-color: white;
+        }
+        
+        .form--input--border--dark {
+            border: 0 !important;
+            
+            fieldset {
+                border-color: white !important;
+            }
+        
+            .Mui-focused {
+                fieldset {
+                    border-color: #1876D1 !important;
+                }
+            }
+            .MuiOutlinedInput-root{
+                color: white !important;
+            }
+            
+        }
+        
+        // .form--input--border--dark:focus {
+        //     border: none !important;
+        // }
+        
+        .password--btn--dark {
+            color: white !important;
+        }
+        
+        .sign-up {
+            margin: auto;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            position: relative;
+        
+            &-box {        
+                justify-content: center;
+                max-width: 345px;
+                margin: auto;
+                border: 1px solid #999;
+                border-radius: 4px;
+                position: relative;
+                z-index: 2;
+        
+                &-form {
+                    &__inputs-box {
+                        justify-content: space-between;
+                        min-height: 250px;
+                        padding: 2rem;
+                    }
+                }
+            }
+        
+             
+        }
+        
+        
+        // RESPONSIVE MEDIA QUERIES
+        
+        /* Desktop View */
+        
+    }
+    
+}
+
+
+@media screen and (min-width:900px) {
+    .sign-up {
+        max-width: 800px;
+        display: flex !important;
+        margin: auto;
+        align-items: center;
+        &-img-box {
+            position:initial;
+            height: auto;
+        }
+    }
+}
