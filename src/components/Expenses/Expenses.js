@@ -468,49 +468,54 @@ function Expenses({ mode, setIsLogged, handleClickLogout, user }) {
         spacing={2}
         sx={{ display: { xs: 'flex', sm: 'flex', md: 'none' } }}
       >
-        <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-          <InputLabel id="demo-simple-select-standard-label"
-            className={mode ? 'MuiInputLabel-root-dark' : ''}
-          >Mois en cours</InputLabel>
-          <Select
-            labelId="demo-simple-select-standard-label"
-            id="demo-simple-select-standard"
-            value={month}
-            onChange={handleChangeMonthSelect}
-            label="Age"
-            className={mode ? 'expenses-select--dark' : ''}
-          >
-            {monthList.map((month) => (
-              <MenuItem key={month.name} value={month.name}>{month.name}</MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-        <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-          <InputLabel id="demo-simple-select-standard-label"
-            className={mode ? 'MuiInputLabel-root-dark' : ''}
-          >Catégorie</InputLabel>
-          <Select
-            labelId="demo-simple-select-standard-label"
-            id="demo-simple-select-standard"
-            value={category}
-            onChange={handleChangeCategorySelect}
-            label="Age"
-            className={mode ? 'expenses-select--dark' : ''}
-          >
-            {allCategories.map((category) => (
-              <MenuItem value={category.name}>{category.name}</MenuItem>
-            ))}
-          </Select>
-        </FormControl>
-        <ExpensesDonutMobile month={month} category={category} optionsByMonth={optionsByMonth} seriesByMonth={seriesByMonth} options={options} series={series} mode={mode} optionsEmpty={optionsEmpty} seriesEmpty={seriesEmpty} expenses={expenses} optionsByCategory={optionsByCategory} seriesByCategory={seriesByCategory} optionsByCategoryAndMonth={optionsByCategoryAndMonth} seriesByCategoryAndMonth={seriesByCategoryAndMonth} />
-        <div className='expenses-mobile-add-btn'>
-          <Button onClick={handleOpen}><CgAdd className='expenses-mobile-add-btn-svg' /></Button>
+        <div className='expenses-mobile-top'>
+          <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+            <InputLabel id="demo-simple-select-standard-label"
+              className={mode ? 'MuiInputLabel-root-dark' : ''}
+            >Mois en cours</InputLabel>
+            <Select
+              labelId="demo-simple-select-standard-label"
+              id="demo-simple-select-standard"
+              value={month}
+              onChange={handleChangeMonthSelect}
+              label="Age"
+              className={mode ? 'expenses-select--dark' : ''}
+            >
+              {monthList.map((month) => (
+                <MenuItem key={month.name} value={month.name}>{month.name}</MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
+            <InputLabel id="demo-simple-select-standard-label"
+              className={mode ? 'MuiInputLabel-root-dark' : ''}
+            >Catégorie</InputLabel>
+            <Select
+              labelId="demo-simple-select-standard-label"
+              id="demo-simple-select-standard"
+              value={category}
+              onChange={handleChangeCategorySelect}
+              label="Age"
+              className={mode ? 'expenses-select--dark' : ''}
+            >
+              {allCategories.map((category) => (
+                <MenuItem value={category.name}>{category.name}</MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          <ExpensesDonutMobile month={month} category={category} optionsByMonth={optionsByMonth} seriesByMonth={seriesByMonth} options={options} series={series} mode={mode} optionsEmpty={optionsEmpty} seriesEmpty={seriesEmpty} expenses={expenses} optionsByCategory={optionsByCategory} seriesByCategory={seriesByCategory} optionsByCategoryAndMonth={optionsByCategoryAndMonth} seriesByCategoryAndMonth={seriesByCategoryAndMonth} />
+          <div className='expenses-mobile-add-btn'>
+            <Button onClick={handleOpen}><CgAdd className='expenses-mobile-add-btn-svg' /></Button>
+          </div>
+          <p className={mode ? 'star-information dark' : 'star-information'}>Les dépenses marquées d'une <Rating name="size-small" defaultValue={1} max={1} /> correspondent à un abonnement</p>
         </div>
-        <p className={mode ? 'star-information dark' : 'star-information'}>Les dépenses marquées d'une <Rating name="size-small" defaultValue={1} max={1} /> correspondent à un abonnement</p>
-        {(month || category) && (
-          <Button variant='outlined' onClick={resetSelectValues}>Afficher l'ensemble des dépenses</Button>
-        )}
-        <ExpensesListMobile month={month} mode={mode} expensesByMonth={expensesByMonth} expensesByMonthByDate={expensesByMonthByDate} allCategories={allCategories} currencySymbol={currencySymbol} deleteExpense={deleteExpense} expenses={expenses} expensesByDate={expensesByDate} expensesAmount={expensesAmount} expensesAmountByMonth={expensesAmountByMonth} expensesByCategory={expensesByCategory} category={category} expensesByCategoryAndMonth={expensesByCategoryAndMonth} expensesAmountByCategory={expensesAmountByCategory} expensesAmountByCategoryAndMonth={expensesAmountByCategoryAndMonth} />
+        <div className='expenses-mobile-bottom'>
+          {(month || category) && (
+            <Button variant='outlined' onClick={resetSelectValues}>Afficher l'ensemble des dépenses</Button>
+          )}
+          <ExpensesListMobile month={month} mode={mode} expensesByMonth={expensesByMonth} expensesByMonthByDate={expensesByMonthByDate} allCategories={allCategories} currencySymbol={currencySymbol} deleteExpense={deleteExpense} expenses={expenses} expensesByDate={expensesByDate} expensesAmount={expensesAmount} expensesAmountByMonth={expensesAmountByMonth} expensesByCategory={expensesByCategory} category={category} expensesByCategoryAndMonth={expensesByCategoryAndMonth} expensesAmountByCategory={expensesAmountByCategory} expensesAmountByCategoryAndMonth={expensesAmountByCategoryAndMonth} />
+        </div>
+
       </Stack>
     </div >
   )

@@ -140,6 +140,12 @@
 .expenses-mobile {
   height: 100% !important;
   overflow: auto !important;
+  &-top {
+    height: 50%;
+  }
+  &-bottom {
+    height: 50%;
+  }
   .MuiFormControl-root {
     width: 30%;
   }
