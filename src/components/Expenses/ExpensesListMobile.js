@@ -137,7 +137,6 @@ function ExpensesListMobile({ month, mode, expensesByMonth, expensesByMonthByDat
 
         {category && month && (
           <>
-            <p>Test</p>
             <p className={mode ? 'dark' : ''}>{month}: Vous avez {expensesByCategoryAndMonth.length} {expensesByCategoryAndMonth.length > 1 ? 'dépenses' : 'dépense'} dans la catégorie {category}  💸 Valeur totale: {expensesAmountByCategoryAndMonth}{currencySymbol}</p>
             {
               expensesByCategoryAndMonth.map((expense) => (

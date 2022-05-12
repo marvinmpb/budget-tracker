@@ -507,7 +507,7 @@ function Expenses({ mode, setIsLogged, handleClickLogout, user }) {
           <Button onClick={handleOpen}><CgAdd className='expenses-mobile-add-btn-svg' /></Button>
         </div>
         <p className={mode ? 'star-information dark' : 'star-information'}>Les dépenses marquées d'une <Rating name="size-small" defaultValue={1} max={1} /> correspondent à un abonnement</p>
-        {month && (
+        {(month || category) && (
           <Button variant='outlined' onClick={resetSelectValues}>Afficher l'ensemble des dépenses</Button>
         )}
         <ExpensesListMobile month={month} mode={mode} expensesByMonth={expensesByMonth} expensesByMonthByDate={expensesByMonthByDate} allCategories={allCategories} currencySymbol={currencySymbol} deleteExpense={deleteExpense} expenses={expenses} expensesByDate={expensesByDate} expensesAmount={expensesAmount} expensesAmountByMonth={expensesAmountByMonth} expensesByCategory={expensesByCategory} category={category} expensesByCategoryAndMonth={expensesByCategoryAndMonth} expensesAmountByCategory={expensesAmountByCategory} expensesAmountByCategoryAndMonth={expensesAmountByCategoryAndMonth} />

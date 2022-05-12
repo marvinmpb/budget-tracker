@@ -39,9 +39,6 @@
     overflow: auto;
     // Il faut gérer le fait de cacher les bordures pour l'overflow
     &-btns {
-      display: flex;
-      justify-content: center;
-      justify-content: space-around;
     }
   }
   &-desktop-right {
