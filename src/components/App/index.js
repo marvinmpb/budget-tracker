@@ -131,7 +131,7 @@ function App() {
           checkIfTokenIsValid={checkIfTokenIsValid}
         />
         <Routes>
-          <Route path='/' element={< Home mode={darkMode} isLogged={isLogged} />} />
+          <Route path='/' element={< Home mode={darkMode} isLogged={isLogged} handleClickLogout={handleClickLogout} />} />
           <Route path='/signin' element={<SignIn mode={darkMode} isLogged={isLogged} setIsLogged={setIsLogged} user={user} setUser={setUser} />} />
           <Route path='/signup' element={<SignUp mode={darkMode} />} />
           {/* Access to the following routes is allowed only if you are connected */}
