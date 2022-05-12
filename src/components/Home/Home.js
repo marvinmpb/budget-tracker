@@ -56,12 +56,6 @@ function Home({ mode, isLogged, handleClickLogout }) {
       >
         <img src={homeMobileImg} alt='image of a man checking his phone to see his expenses' className='home-mobile-img' />
         <Carousel appFunctionalityText={appFunctionalityText} mode={mode} />
-        {/* Bottom navbar for mobile view below */}
-        {isLogged && (
-          <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' }, }}>
-            <BottomNavMobile mode={mode} handleClickLogout={handleClickLogout} />
-          </Box>
-        )}
       </Box>
       <Box className='home-box'
         sx={{

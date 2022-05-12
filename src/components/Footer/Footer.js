@@ -47,15 +47,6 @@ function Footer({ mode, isLogged, setIsLogged, handleClickLogout }) {
           </NavLink>
         </Stack>
       }
-      {/* Code below is displayed in the DOM only if the user is logged in and on the home page */}
-      {
-        location.pathname === '/' && isLogged &&
-        < Stack
-          sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }
-          }>
-          <BottomNavMobile handleClickLogout={handleClickLogout} mode={mode} />
-        </Stack >
-      }
       <Stack
         className='footer-buttons--desktop'
         direction='row'
