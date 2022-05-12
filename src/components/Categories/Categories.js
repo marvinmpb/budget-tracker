@@ -247,10 +247,7 @@ function Categories({ mode, isLogged, handleClickLogout, setIsLogged, isLoading,
           </List>
         </div>
       </div>
-      {/* Bottom navbar for mobile view below */}
-      <Box sx={{ display: { xs: 'block', sm: 'block', md: 'none' }, }}>
-        <BottomNavMobile mode={mode} handleClickLogout={handleClickLogout} />
-      </Box>
+
     </>
   )
 }

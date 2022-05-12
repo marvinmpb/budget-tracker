@@ -398,10 +398,7 @@ function Settings({ mode, setIsLogged, user, handleClickLogout, setUser }) {
         </div>
       </div>
 
-      {/* Bottom navbar for mobile view */}
-      <Box sx={{ display: { xs: 'flex', sm: 'flex', md: 'none' } }}>
-        <BottomNavMobile mode={mode} setIsLogged={setIsLogged} handleClickLogout={handleClickLogout} />
-      </Box>
+
 
     </div >
   )

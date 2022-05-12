@@ -24,7 +24,7 @@ library.add(fas);
 
 function ExpensesListMobile({ month, mode, expensesByMonth, expensesByMonthByDate, allCategories, currencySymbol, deleteExpense, expenses, expensesByDate, expensesAmount, expensesAmountByMonth, expensesByCategory, category, expensesByCategoryAndMonth, expensesAmountByCategory, expensesAmountByCategoryAndMonth }) {
   return (
-    <div>
+    <div className='expenses-mobile-list'>
       <List
         sx={{
           width: '100%',
