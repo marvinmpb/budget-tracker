@@ -40,7 +40,7 @@ function App() {
   const [isLogged, setIsLogged] = useState(false);
   const [user, setUser] = useState(null);
   // State for the loader above
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(true)
 
 
   // function to verify if local storage contains valid token 

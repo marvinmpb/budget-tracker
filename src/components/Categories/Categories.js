@@ -107,40 +107,36 @@ function Categories({ mode, isLogged, handleClickLogout, setIsLogged, isLoading,
 
 
   const getDefaultCategories = async (id) => {
-    setIsLoading(true);
     axios.get(
       `${API.API_URL}/v1/categories`,
       { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
     ).then((res) => {
       const defaultCategories = res?.data.filter(category => category.accountId === null)
       setCategoriesList(defaultCategories);
-      setIsLoading(false);
       // console.log(res.data)
     }).catch((err) => {
       if (err.response.status === 400) setError('Le token est invalide');
       else if (err.response.status === 500) setError('Une erreur interne est survenue');
     }).finally(() => {
       // always executed
-      // setIsLoading(false);
+      setIsLoading(false);
     });
   };
 
   const getCustomizedCategories = async () => {
-    setIsLoading(true);
     axios.get(
       `${API.API_URL}/v1/categories`,
       { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } }
     ).then((res) => {
       const personalCategories = res?.data.filter(category => category.accountId !== null)
       setCustomizedCategories(personalCategories)
-      setIsLoading(false);
       // console.log(res.data)
     }).catch((err) => {
       if (err.response.status === 400) setError('Le token est invalide');
       else if (err.response.status === 500) setError('Une erreur interne est survenue');
     })
       .finally(() => {
-        // setIsLoading(false);
+        setIsLoading(false);
       });
   }
 

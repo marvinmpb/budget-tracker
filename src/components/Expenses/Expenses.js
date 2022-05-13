@@ -14,6 +14,7 @@ import API from '../../API.json';
 
 // Components
 import LeftNavBar from '../LeftNavBar/LeftNavBar';
+import Loader from 'components/Loader/Loader';
 import AddExpenses from './AddExpenses';
 import BottomNavMobile from '../BottomNavMobile/BottomNavMobile';
 import ExpensesListDesktop from './ExpensesListDesktop';
@@ -50,7 +51,7 @@ const modalStyle = {
   p: 4,
 };
 
-function Expenses({ mode, setIsLogged, handleClickLogout, user }) {
+function Expenses({ mode, setIsLogged, handleClickLogout, user, isLoading, setIsLoading }) {
   const [error, setError] = useState(null);
 
   // all expenses
@@ -114,6 +115,9 @@ function Expenses({ mode, setIsLogged, handleClickLogout, user }) {
     }).catch((err) => {
       if (err.response.status === 400) setError('Le token est invalide');
       else if (err.response.status === 500) setError('Une erreur interne est survenue');
+    }).finally(() => {
+      // always executed
+      setIsLoading(false);
     });
   };
 
@@ -138,6 +142,9 @@ function Expenses({ mode, setIsLogged, handleClickLogout, user }) {
     }).catch((err) => {
       if (err.response?.status === 400) setError('Le token est invalide');
       else if (err.response?.status === 500) setError('Une erreur interne est survenue');
+    }).finally(() => {
+      // always executed
+      setIsLoading(false);
     });
   }
 
@@ -152,6 +159,9 @@ function Expenses({ mode, setIsLogged, handleClickLogout, user }) {
     }).catch((err) => {
       if (err.response?.status === 400) setError('Le token est invalide');
       else if (err.response?.status === 500) setError('Une erreur interne est survenue');
+    }).finally(() => {
+      // always executed
+      setIsLoading(false);
     });
   }
 
@@ -289,6 +299,9 @@ function Expenses({ mode, setIsLogged, handleClickLogout, user }) {
     }).catch((err) => {
       if (err.response.status === 400) setError('Le token est invalide');
       else if (err.response.status === 500) setError('Une erreur interne est survenue');
+    }).finally(() => {
+      // always executed
+      setIsLoading(false);
     });
   };
 
@@ -303,6 +316,9 @@ function Expenses({ mode, setIsLogged, handleClickLogout, user }) {
     }).catch((err) => {
       if (err.response.status === 400) setError('Le token est invalide');
       else if (err.response.status === 500) setError('Une erreur interne est survenue');
+    }).finally(() => {
+      // always executed
+      setIsLoading(false);
     });
   }
 
@@ -396,6 +412,12 @@ function Expenses({ mode, setIsLogged, handleClickLogout, user }) {
   const resetSelectValues = () => {
     setMonth('')
     setCategory('')
+  }
+
+  if (isLoading) {
+    return (
+      <Loader />
+    )
   }
 
   return (
