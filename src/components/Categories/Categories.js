@@ -32,6 +32,7 @@ import API from '../../API.json';
 
 // == Components
 import LeftNavBar from 'components/LeftNavBar/LeftNavBar';
+import Loader from 'components/Loader/Loader';
 import AddCategories from 'components/Categories/AddCategories';
 import BottomNavMobile from '../BottomNavMobile/BottomNavMobile';
 import { iconsArray } from 'components/Categories/icons'
@@ -176,6 +177,12 @@ function Categories({ mode, isLogged, handleClickLogout, setIsLogged, isLoading,
       handleClose()
       createCategory(data)
     }
+  }
+
+  if (isLoading) {
+    return (
+      <Loader />
+    )
   }
 
   return (

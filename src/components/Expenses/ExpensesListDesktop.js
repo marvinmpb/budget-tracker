@@ -104,17 +104,6 @@ function ExpensesListDesktop({ month, mode, expensesByMonth, expensesByMonthByDa
           </>
         )}
 
-
-
-
-
-
-
-
-
-
-
-
         {category && !month && (
           <>
             <p className={mode ? 'dark' : ''}>{category}: Vous avez {expensesByCategory.length} {expensesByCategory.length > 1 ? 'dépenses' : 'dépense'} dans la catégorie 💸 Valeur totale: {expensesAmountByCategory}{currencySymbol}</p>
@@ -149,10 +138,6 @@ function ExpensesListDesktop({ month, mode, expensesByMonth, expensesByMonthByDa
           </>
         )}
 
-
-
-
-
         {category && month && (
           <>
             <p className={mode ? 'dark' : ''}>{month}: Vous avez {expensesByCategoryAndMonth.length} {expensesByCategoryAndMonth.length > 1 ? 'dépenses' : 'dépense'} dans la catégorie {category}  💸 Valeur totale: {expensesAmountByCategoryAndMonth}{currencySymbol}</p>
@@ -186,11 +171,6 @@ function ExpensesListDesktop({ month, mode, expensesByMonth, expensesByMonthByDa
             }
           </>
         )}
-
-
-
-
-
 
       </List>
     </div>
