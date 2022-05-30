@@ -47,29 +47,31 @@ function Footer({ mode, isLogged, setIsLogged, handleClickLogout }) {
           </NavLink>
         </Stack>
       }
-      <Stack
-        className='footer-buttons--desktop'
-        direction='row'
-        sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}
-        spacing={2}
-        justifyContent={'center'}
-      >
-        <NavLink to='/about' underline='hover'
-          className={mode ? 'footer-link--dark' : 'footer-link--light'}
+      {location.pathname !== '/about' &&
+        <Stack
+          className='footer-buttons--desktop'
+          direction='row'
+          sx={{ display: { xs: 'none', sm: 'none', md: 'block' } }}
+          spacing={2}
+          justifyContent={'center'}
         >
-          {'A propos'}
-        </NavLink>
-        {/* <NavLink to='/contact' underline='hover'
+          <NavLink to='/about' underline='hover'
+            className={mode ? 'footer-link--dark' : 'footer-link--light'}
+          >
+            {'A propos'}
+          </NavLink>
+          {/* <NavLink to='/contact' underline='hover'
           className={mode ? 'footer-link--dark' : 'footer-link--light'}
         >
           {'Contact'}
         </NavLink> */}
-        {/* <NavLink to='/legalnotice' underline='hover'
+          {/* <NavLink to='/legalnotice' underline='hover'
           className={mode ? 'footer-link--dark' : 'footer-link--light'}
         >
           {'Mentions légales'}
         </NavLink> */}
-      </Stack>
+        </Stack>
+      }
 
       {/* Bottom navbar for mobile view */}
       {isLogged && (
